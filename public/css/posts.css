@@ -1,0 +1,193 @@
+html{
+    scroll-behavior: smooth;
+}
+header{
+    width: 100%;
+    box-sizing: border-box;
+    padding:0.5rem 1rem;
+    display: flex;
+    height: 5rem;
+    background-color: #00052a;
+}
+header a{
+    height: 100%;
+}
+header a img{
+    height: 100%;
+}
+div#create_post{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+}
+div#create_post a{
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 2rem;
+    color: white;
+    background-color: rgb(57, 58, 59);
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+}
+div#create_post a:hover{
+    background-color: rgb(49, 50, 50);
+}
+div#create_post a i{
+    margin-right: 7px;
+}
+div.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.post{
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.495);
+    padding: 1rem;
+    background-color: rgb(48, 47, 47);
+    margin-bottom: 1.5rem;
+}
+div.post div.profile{
+    /* outline: 2px solid white; */
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+div.post div.profile div.profile-pic-username{
+    display: flex;
+    align-items: center;
+    height: 95%;
+}
+div.post div.profile div.profile-pic-username img{
+    height: 100%;
+}
+div.post div.profile p{
+    margin-left: 1rem;
+}
+div.post div.image{
+    width: 100%;
+}
+div.profile div.menu{
+    position: relative;
+    justify-self: right;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+div.profile div.menu > div{
+    display: none;
+}
+div.profile div.menu.active > div{
+    display: block;
+    width: 150px;
+    background-color: rgb(52, 52, 52);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: default;
+    right: 0;
+    top: 20px;
+    padding: 5px 0;
+    position: absolute;
+    outline: 1px solid rgba(235, 232, 232, 0.482);
+    border-radius: 10px;
+}
+div.edit_delete span{
+    /* display: inline-block; */
+    width: 100%;
+    font-size: 0.92rem;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+}
+div.edit_delete span a i, div.edit_delete span.delete form button i{
+    margin-right: 5px;
+}
+div.edit_delete span a{
+    display: inline-block;
+    width: 100%;
+    /* outline: 2px solid red; */
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+div.edit_delete span.delete form button{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    background-color: transparent;
+    font-family: "Nunito", sans-serif;
+    color: red;
+    border: none;
+    /* outline: 1px solid red; */
+    font-size: 0.92rem;
+    transition: all 0.15s ease-in-out;
+}
+div.edit_delete span a, div.edit_delete span button{
+    opacity: 0.85;
+}
+div.edit_delete span a:hover, div.edit_delete span button:hover{
+    opacity: 1;
+}
+/* duv.edit_delete  */
+div.edit_delete span.delete i{
+    font-weight: 700;
+    color: red;
+}
+div.post p.caption{
+    margin-top: 5px;
+    padding: 0.5rem 0;
+}
+div.post div.image img{
+    width: 100%;
+}
+div.like{
+    margin-top: 7px;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-content: center;
+    padding: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+div.liked i{
+    color: #fc0373;
+}
+div#scroll-up{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: #037bfc;
+    transition: all 0.2s ease-in-out;
+}
+
+div#scroll-up a{
+    color: white;
+}
+@media screen and (max-width:720px) {
+    header{
+        height: 3.5rem;
+    }
+    div.post{
+        width: 80vw;
+    }
+    div#scroll-up{
+        bottom: 1rem;
+        right: 1rem;
+    }
+}

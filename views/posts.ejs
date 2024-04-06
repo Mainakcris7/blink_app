@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blink: Where Moments Spark and Stories Shine!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/posts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="/logo.png" alt="Logo">
+        </a>
+    </header>
+    <div id="create_post">
+        <a href="/posts/new"><i class="fa-solid fa-circle-plus"></i>Create new posts</a>
+    </div>
+    <div class="posts">
+        <% for(post of posts) {%>
+            <div class="post">
+                <div class="profile">
+                    <div class="profile-pic-username">
+                        <img src="/profile_pic.png" alt="">
+                        <p class="username"><%=post.username%></p>
+                    </div>
+                    <div class="menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <div class="edit_delete">
+                            <span class="edit">
+                                <a href="/posts/edit/<%= post.id %>"><i class="fa-regular fa-pen-to-square"></i>Edit post
+                                </a>
+                            </span>
+                            <span class="delete">
+                                <form action="/posts/<%= post.id%>?_method=DELETE" method="POST">
+                                    <button><i class="fa-regular fa-trash-can"></i>Delete post</button>
+                                </form>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p class="caption"><%=post.caption%></p>
+                <div class="image">
+                    <img src="<%=post.imgUrl%>" alt="">
+                </div>
+                <div class="like"><i class="fa-regular fa-heart"></i></div>
+            </div>
+        <% }%>
+        <div id="scroll-up" title="Scroll to top">
+            <a href="#create_post"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
+

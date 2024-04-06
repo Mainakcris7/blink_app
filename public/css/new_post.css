@@ -1,0 +1,102 @@
+html{
+    scroll-behavior: smooth;
+}
+h1{
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+form{
+    margin: auto;
+    width: 35vw;
+    min-height: 50vh;
+    border: 1px solid rgba(250, 246, 246, 0.4);
+    border-radius: 10px;
+    margin: 0 auto 3rem auto;
+    padding: 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+form div.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form div.container div.inputs{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+form div.container label{
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+form div.container input[type='text'], textarea{
+    background-color: rgb(42, 42, 42);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+}
+textarea{
+    resize: vertical;
+}
+form div.container input[type='text']:focus, textarea:focus{
+    outline: 2px solid rgba(0, 94, 255, 0.594);
+}
+div#preview_img_radio{
+    margin-top: 1rem;
+    width: 90%;
+    display: none;
+}
+div#preview_img_radio *{
+    cursor: pointer;
+}
+form button[type='submit']{
+    background-color: #036ffc;
+    border: none;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    padding: 0.2rem 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+form button span{
+    font-size: 1.2rem !important;
+    position: relative;
+    left: 5px;
+    transition: all 0.3s ease-in !important;
+}
+form button:hover{
+    background-color: #0357ab;
+}
+div#preview-img{
+    width: 90%;
+    display: none;
+    margin-top: 1rem;
+}
+div#preview-img img{
+    width: 100%;
+}
+@media screen and (max-width:720px) {
+    form{
+        width: 85vw;
+    }
+    input::placeholder{
+        font-size: 0.9rem;
+    }
+    form button{
+        font-size: 1rem !important;
+    }
+
+}

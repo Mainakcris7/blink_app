@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/new_post.css">
+</head>
+<body>
+    <h1>Create new post</h1>
+    <form action="/posts" method="POST">
+        <div class="container">
+            <div class="inputs">
+                <label for="name">Username</label>
+                <input type="text" name="username" id="name" placeholder="e.g. Mainak Mukherjee" required>
+            </div>
+            <div class="inputs">
+                <label for="caption">Caption</label>
+                <textarea name="caption" id="caption" required placeholder="What an amazingly beautiful day!"></textarea>
+            </div>
+            <div class="inputs">
+                <label for="img_url">Image URL</label>
+                <input type="text" name="imgUrl" id="img_url" placeholder="Copy image address and paste here">
+            </div>
+            <div class="form-check form-switch" id="preview_img_radio">
+                <input class="form-check-input check_image_preview" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Preview image</label>
+            </div>
+            <div id="preview-img">
+                <img src="" alt="" id="preview_img_image">
+            </div>
+            <button type="submit">Post 
+                <span class="material-symbols-outlined">
+                send
+                </span>
+            </button>
+        </div>
+    </form>
+    <script src="/js/create_edit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
