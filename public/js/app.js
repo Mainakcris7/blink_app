@@ -4,7 +4,6 @@ let likes = document.getElementsByClassName("like")
 for (let i = 0; i < menus.length; i++) {
     menus[i].addEventListener("click", () => {
         menus[i].classList.toggle("active")
-        console.log(menus[i].classList)
     })
 }
 
