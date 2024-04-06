@@ -100,7 +100,7 @@ div#preview-img img{
     }
 
 }
-@media screen and (max-width:1200px){
+@media screen and (min-width:900px) and (max-width:1200px){
     form{
         width: 550px;
     }
