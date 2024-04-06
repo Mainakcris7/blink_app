@@ -1,5 +1,5 @@
 {
-  "name": "facebook-like-app",
+  "name": "blink-app",
   "version": "1.0.0",
   "description": "REST API based social media app",
   "main": "index.js",
